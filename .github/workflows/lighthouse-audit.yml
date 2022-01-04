@@ -15,5 +15,5 @@ jobs:
           cd lc101
           npm install
           npm run audit
-          ls /lc101/audit
-          cat /lc101/audit/lighthouse.report.html
+          ls audit/
+          cat audit/lighthouse.report.html
