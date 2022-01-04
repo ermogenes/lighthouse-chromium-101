@@ -12,6 +12,7 @@ jobs:
 
       - name: Audit 🩺
         run: |
+          cd lc101
           npm install
           npm run audit
           ls /lc101/audit
