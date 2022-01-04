@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "serve:prod": "vue-cli-service serve --mode production --https",
     "build": "vue-cli-service build",
-    "lh": "wait-on https://localhost:8080 --httpTimeout 30000 && lighthouse https://localhost:8080 --chrome-flags='--ignore-certificate-errors' --chrome-flags='--headless' --output-path=audit/lighthouse --output json --output html --output csv",
+    "lh": "wait-on https://localhost:8080 --httpTimeout 30000 && lighthouse https://localhost:8080 --chrome-flags='--ignore-certificate-errors' --chrome-flags='--headless' --output-path=audit/lighthouse --output html --output csv",
     "audit": "npm-run-all -p -n -r serve:prod lh"
   },
   "dependencies": {
