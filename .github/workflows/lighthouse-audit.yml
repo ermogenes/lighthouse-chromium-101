@@ -2,7 +2,7 @@ name: Audit with Lighthouse
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
   lighthouse-audit:
     runs-on: ubuntu-latest
