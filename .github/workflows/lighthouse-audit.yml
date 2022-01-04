@@ -15,9 +15,11 @@ jobs:
           cd lc101
           npm install
           npm run audit
-      - name: Archive lighthouse reports 🗃
+
+      - name: Archive reports 🗃
         uses: actions/upload-artifact@v2
         with:
           name: lighthouse-reports
+          retention-days: 90
           path: |
             lc101/audit
