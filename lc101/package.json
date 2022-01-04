@@ -1,0 +1,26 @@
+{
+  "name": "lc101",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "serve:prod": "vue-cli-service serve --mode production --https",
+    "build": "vue-cli-service build",
+    "lh": "wait-on https://localhost:8080 --httpTimeout 30000 && lighthouse https://localhost:8080 --chrome-flags='--ignore-certificate-errors' --chrome-flags='--headless' --output-path=audit/lighthouse --output json --output html --output csv",
+    "audit": "npm-run-all -p -n -r serve:prod lh"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "register-service-worker": "^1.7.1",
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-pwa": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "lighthouse": "^9.2.0",
+    "npm-run-all": "^4.1.5",
+    "wait-on": "^6.0.0"
+  }
+}
